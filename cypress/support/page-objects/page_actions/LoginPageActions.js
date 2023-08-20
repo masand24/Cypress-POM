@@ -1,9 +1,9 @@
-import {LoginPageElement} from "../page_elements/LoginPageElement";
+import LoginPageElement from "../page_elements/LoginPageElement";
 
 export default class LoginPageActions {
-  // constructor() {
-  //   this.elements = new LoginPageElements();
-  // }
+  constructor() {
+    this.elements = new LoginPageElement();
+  }
 
   navigateToUrl() {
     cy.visit("/");
@@ -14,8 +14,8 @@ export default class LoginPageActions {
   }
 
   loginToApplication() {
-    LoginPageElement.getUserName().type("admin");
-    LoginPageElement.getPassword().type("admin123");
-    LoginPageElement.getLoginBtn().click();
+    this.elements.getUserName().type("admin");
+    this.elements.getPassword().type("admin123");
+    this.elements.getLoginBtn().click();
   }
 }
