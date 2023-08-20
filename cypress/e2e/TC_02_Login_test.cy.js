@@ -9,5 +9,10 @@ describe("Login as user", () => {
   it("Verfy login page", () => {
     cy.wait(2000);
     loginpage.loginToApplication();
+    loginpage.validateUserClickOnSidePannel();
+    loginpage.ValidateUserClickAddButton();
+
+
+
   });
 });
